@@ -1,5 +1,13 @@
 function openOrSenior(data) {
-    // ...
+    let myArr = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i][0] >= 55 && data[i][1] > 7) {
+            myArr.push('Senior');
+        } else {
+            myArr.push('Open');
+        }
+    }
+    return myArr;
 }
 
 console.log(openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]])); // ['Open', 'Senior', 'Open', 'Senior']
